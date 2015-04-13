@@ -1,11 +1,11 @@
 use Test::Most tests => 5;
-use Person;
+use Rectangle;
 
-my $p = Person->new( name => "Paula" );
+my $r = Rectangle->new( height => 100 );
 
-is $p->name, "Paula", "The person's name is accessible via a method call.";
-is $p->{name}, "Paula", "\$p is a blessed hash so the name is available from the hash itself.";
+is $r->height, 100, "The rectangle's height is accessible via a method call.";
+is $r->{height}, 100, "\$r is a blessed hash so the height is available from the hash itself.";
 
-is $p->age, undef, "The person's age is not yet set.";
-is $p->age(30), 30, "We can set the person's age.";
-is $p->age, 30, "The age definitely got set.";
+is $r->width, undef, "The rectangle's width is not yet set.";
+is $r->width(30), 30, "We can set the rectangle's width.";
+is $r->width, 30, "The rectangle's width definitely got set.";
